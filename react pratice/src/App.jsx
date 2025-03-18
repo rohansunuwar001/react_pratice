@@ -23,6 +23,31 @@ import UserStatus from "./components/ConditionalRendering/UserStatus";
 import GreetingTernery from "./components/ConditionalRendering/GreetingTernery";
 import InLineCss from "./components/InlineStyle/InLineCss";
 import DynamicCss from "./components/InlineStyle/DynamicCss";
+// import "./index.css";
+import SeparateFileForCss from "./components/InlineStyle/SeparateFileForCss";
+import React_Icons from "./components/React-Icons/React_Icons";
+import StyledCard from "./components/React-Icons/StyledCard";
+import ProfileCard from "./components/React-Icons/ProfileCard";
+import IconComponent from "./components/React-Icons/IconComponent";
+import Button from "./components/EventHandling/Button";
+import CopyContent from "./components/EventHandling/CopyContent";
+import MoveComponent from "./components/EventHandling/MoveComponent";
+import UseStateHooks from "./components/UseState/UseStateHooks";
+import UseStateExample from "./components/UseState/UseStateExample";
+import UseStateExample2 from "./components/UseState/UseStateExample2";
+import UseState3 from "./components/UseState/UseState3";
+import UseState4 from "./components/UseState/UseState4";
+import Example from "./components/UseState/Component/Example";
+import ExampleTwo from "./components/UseState/Component/ExampleTwo";
+import ExampleThree from "./components/UseState/Component/ExampleThree";
+import Counter from "./components/UseState/PracticeUseState/Counter";
+import TodoList from "./components/UseState/PracticeUseState/TodoList";
+import Profile from "./components/UseState/PracticeUseState/Profile";
+import ShoppingList from "./components/UseState/PracticeUseState/ShoppingList";
+import Portal1 from "./components/Portals/Portal1";
+import PopupContent from "./components/Portals/PopupContent";
+import Switcher from "./components/Switcher/Switcher";
+import UseEffect from "./components/UseEffect/UseEffect";
 
 const App = () => {
   return (
@@ -51,15 +76,41 @@ const App = () => {
       </PropCard> */}
       {/* <IfRendering isValid={false} /> */}
       {/* <ItemsCart /> */}
-{/* <Weather temperature={-5} />
+      {/* <Weather temperature={-5} />
 
 <UserStatus loggedIn={true} isAdmin={true} />
 
 <GreetingTernery greet="afternoon" /> */}
 
+      {/* <InLineCss />
+      <DynamicCss />
 
-<InLineCss />
-<DynamicCss />
+      <SeparateFileForCss /> */}
+
+      {/* <React_Icons /> */}
+      {/* <StyledCard /> */}
+      {/* <ProfileCard /> */}
+      {/* <IconComponent /> */}
+
+      {/* <Button /> */}
+      {/* <CopyContent /> */}
+      {/* <MoveComponent /> */}
+
+      {/* <UseStateHooks /> */}
+      {/* <UseStateExample /> */}
+      {/* <UseStateExample2 /> */}
+      {/* <UseState3 /> */}
+      {/* <UseState4 /> */}
+      {/* <Example /> */}
+      {/* <ExampleTwo /> */}
+      {/* <ExampleThree /> */}
+      {/* <Counter /> */}
+      {/* <TodoList /> */}
+      {/* <Profile /> */}
+      {/* <ShoppingList /> */}
+      {/* <Portal1 /> */}
+      {/* <Switcher /> */}
+      <UseEffect />
     </div>
   );
 };

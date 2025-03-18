@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(107, 181, 32, green, blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+h1{
+    font-family: sans-serif;
+    border: 2px solid #ccc;
+    padding: 20px;
+}
+
+
+.first-icon{
+   height: 23px;
+   width: 45px;
+   padding: 20px;
+}
+
+.profileStyle{
+background-color: lightgray;
+padding: 15px;
+border: 8px;
+color: black;
+}
