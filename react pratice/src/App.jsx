@@ -1,4 +1,5 @@
 import React from "react";
+import { createContext } from "react";
 import Footer from "./components/Intro/Footer";
 import Header from "./components/Intro/Header";
 import MainContent from "./components/Intro/MainContent";
@@ -48,8 +49,20 @@ import Portal1 from "./components/Portals/Portal1";
 import PopupContent from "./components/Portals/PopupContent";
 import Switcher from "./components/Switcher/Switcher";
 import UseEffect from "./components/UseEffect/UseEffect";
+import UseEffect2 from "./components/UseEffect/UseEffect2";
+import BasicEffect from "./components/UseEffect/BasicEffect";
+import CounterEffect from "./components/UseEffect/CounterEffect";
+import FetchData from "./components/UseEffect/FetchData";
+import ContextApi from "./components/PD&ContextApi/ContextApi";
+import ComponentA from "./components/PD&ContextApi/ComponentA";
+import ContextHook from "./components/PD&ContextApi/UseContextHook/ContextHook";
+
+export const Data = createContext();
+export const Data1 = createContext();
 
 const App = () => {
+  const name = "Rohan Don";
+  const age = "22";
   return (
     <div>
       {/* <Greet /> */}
@@ -110,7 +123,18 @@ const App = () => {
       {/* <ShoppingList /> */}
       {/* <Portal1 /> */}
       {/* <Switcher /> */}
-      <UseEffect />
+      {/* <UseEffect /> */}
+      {/* <UseEffect2 /> */}
+      {/* <BasicEffect /> */}
+      {/* <CounterEffect /> */}
+      {/* <FetchData /> */}
+      <Data.Provider value={name}>
+        <Data1.Provider value={age}>
+          {/* <ContextApi /> */}
+          {/* <ComponentA /> */}
+          <ContextHook />
+        </Data1.Provider>
+      </Data.Provider>
     </div>
   );
 };
