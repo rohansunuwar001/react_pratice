@@ -1,61 +1,17 @@
-import React from "react";
-import { createContext } from "react";
-import Footer from "./components/Intro/Footer";
-import Header from "./components/Intro/Header";
-import MainContent from "./components/Intro/MainContent";
-import AboutJsx from "./components/JSX Rules/AboutJsx";
-import WelcomeMessage from "./components/JSX Rules/WelcomeMessage";
-import JsxRules from "./components/JSX Rules/JsxRules";
-import DynamicExpressions from "./components/DynamicDeclarations/DynamicExpressions";
-import Greeting from "./components/DynamicDeclarations/Greeting";
-import ProductInfo from "./components/DynamicDeclarations/ProductInfo";
-import List from "./components/Lists/List";
-import ListArrays from "./components/Lists/ListArrays";
-import UserList from "./components/Lists/UserList";
-import ProductList from "./components/Lists/ProductList";
-import PropDrilling from "./components/PropsDrilling/PropDrilling";
-import Person from "./components/PropsDrilling/Person";
-import ProductProp from "./components/PropsDrilling/ProductProp";
-import PropCard from "./components/PropsDrilling/PropCard";
-import IfRendering from "./components/ConditionalRendering/IfRendering";
-import ItemsCart from "./components/ConditionalRendering/ItemsCart";
-import Weather from "./components/ConditionalRendering/Weather";
-import UserStatus from "./components/ConditionalRendering/UserStatus";
-import GreetingTernery from "./components/ConditionalRendering/GreetingTernery";
-import InLineCss from "./components/InlineStyle/InLineCss";
-import DynamicCss from "./components/InlineStyle/DynamicCss";
+import React, { createContext } from "react";
 // import "./index.css";
-import SeparateFileForCss from "./components/InlineStyle/SeparateFileForCss";
-import React_Icons from "./components/React-Icons/React_Icons";
-import StyledCard from "./components/React-Icons/StyledCard";
-import ProfileCard from "./components/React-Icons/ProfileCard";
-import IconComponent from "./components/React-Icons/IconComponent";
-import Button from "./components/EventHandling/Button";
-import CopyContent from "./components/EventHandling/CopyContent";
-import MoveComponent from "./components/EventHandling/MoveComponent";
-import UseStateHooks from "./components/UseState/UseStateHooks";
-import UseStateExample from "./components/UseState/UseStateExample";
-import UseStateExample2 from "./components/UseState/UseStateExample2";
-import UseState3 from "./components/UseState/UseState3";
-import UseState4 from "./components/UseState/UseState4";
-import Example from "./components/UseState/Component/Example";
-import ExampleTwo from "./components/UseState/Component/ExampleTwo";
-import ExampleThree from "./components/UseState/Component/ExampleThree";
-import Counter from "./components/UseState/PracticeUseState/Counter";
-import TodoList from "./components/UseState/PracticeUseState/TodoList";
-import Profile from "./components/UseState/PracticeUseState/Profile";
-import ShoppingList from "./components/UseState/PracticeUseState/ShoppingList";
-import Portal1 from "./components/Portals/Portal1";
-import PopupContent from "./components/Portals/PopupContent";
-import Switcher from "./components/Switcher/Switcher";
-import UseEffect from "./components/UseEffect/UseEffect";
-import UseEffect2 from "./components/UseEffect/UseEffect2";
-import BasicEffect from "./components/UseEffect/BasicEffect";
-import CounterEffect from "./components/UseEffect/CounterEffect";
-import FetchData from "./components/UseEffect/FetchData";
-import ContextApi from "./components/PD&ContextApi/ContextApi";
-import ComponentA from "./components/PD&ContextApi/ComponentA";
-import ContextHook from "./components/PD&ContextApi/UseContextHook/ContextHook";
+import { useId } from "react";
+import { UserProvider } from "./components/PD&ContextApi/UseContextHook/UserContext";
+import UserProfile from "./components/PD&ContextApi/UseContextHook/UserProfile";
+import UpdateUser from "./components/PD&ContextApi/UseContextHook/UpdateUser";
+import UseReducer from "./components/UseReducerHook/UseReducer";
+import Counter from "./components/UseReducerHook/Counter";
+import UserRef from "./components/UseRef/UserRef";
+import FocusInput from "./components/UseRef/FocusInput";
+import Timer from "./components/UseRef/Timer";
+import CHooksEg from "./components/CustomHooks/CHooksEg";
+import UniqueId from "./components/CustomHooks/UniqueId";
+
 
 export const Data = createContext();
 export const Data1 = createContext();
@@ -63,6 +19,7 @@ export const Data1 = createContext();
 const App = () => {
   const name = "Rohan Don";
   const age = "22";
+  const id = useId();
   return (
     <div>
       {/* <Greet /> */}
@@ -128,13 +85,28 @@ const App = () => {
       {/* <BasicEffect /> */}
       {/* <CounterEffect /> */}
       {/* <FetchData /> */}
-      <Data.Provider value={name}>
+      {/* <Data.Provider value={name}>
         <Data1.Provider value={age}>
-          {/* <ContextApi /> */}
-          {/* <ComponentA /> */}
+          <ContextApi />
+          <ComponentA />
           <ContextHook />
+    
         </Data1.Provider>
-      </Data.Provider>
+      </Data.Provider> */}
+       {/* <UserContext /> */}
+      {/* <UserProvider>
+        <UserProfile />
+        <UpdateUser />
+      </UserProvider> */}
+      {/* <UseReducer /> */}
+      {/* <Counter /> */}
+      {/* <UserRef /> */}
+      {/* <FocusInput /> */}
+      {/* <Timer /> */}
+      {/* <CHooksEg /> */}
+      <UniqueId />
+      <p id={`${id}-para`}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, nemo! Minus, rem. Tempore temporibus ipsam necessitatibus veniam vero quos illo doloremque eos expedita.</p>
+      <UniqueId />
     </div>
   );
 };
